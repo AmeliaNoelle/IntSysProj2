@@ -5,7 +5,7 @@
 
 //const { default: axios } = require("axios");
 
-axios.defaults.baseURL="http://localhost:5000";
+axios.defaults.baseURL= process.env.BASE_URL || "http://localhost:5000";
 
 $(document).ready(function(){
     
@@ -84,11 +84,6 @@ $('#ingredient').on('select2:select', function (e) {
             });
             });
         }
-
-       
-
-            //on click send another request to retreive the recipe
-         
 
     })
   });
