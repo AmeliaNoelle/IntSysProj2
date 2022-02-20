@@ -10,7 +10,7 @@ axios.defaults.baseURL= "/";
 $(document).ready(function(){
     
     axios.get('api/ingredient/getall').then((response)=>{
-        console.log(response.data)
+       // console.log(response.data)
     
         $("#ingredient").select2({
             data: response.data
@@ -19,10 +19,10 @@ $(document).ready(function(){
 });
 $('#ingredient').on('select2:select', function (e) {
     let theIngredient = e.params.data;
-    console.log(theIngredient)
+    //console.log(theIngredient)
 
     axios.get('api/meals/'+theIngredient.text).then((response)=>{
-        console.log(response.data)
+        //console.log(response.data)
 
         var mealList = response.data.meals;
        // var mealList = response.data.meals.map(list =>{
@@ -73,10 +73,10 @@ $('#ingredient').on('select2:select', function (e) {
             document.getElementById(mealNumber).appendChild(newDiv);
             
             document.getElementById(mealNumber).addEventListener("click", (e)=>{
-                console.log(e.srcElement.parentNode.id);
+                //console.log(e.srcElement.parentNode.id);
                // console.log(this);
                 axios.get('api/meal/'+e.srcElement.parentNode.id).then((response)=>{
-                console.log(response.data);
+                //console.log(response.data);
 
                 window.open(response.data.meals[0].strYoutube), '_blank';
 
