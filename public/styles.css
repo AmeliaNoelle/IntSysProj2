@@ -1,0 +1,39 @@
+body{  
+    margin-top: 3rem !important;
+    background-image: url("images/background.jpg");
+    background-size: 100%;
+
+    font-family: 'Libre Baskerville', serif;
+   
+}
+
+h1, h4{
+    color: whitesmoke;
+}
+h1{
+    font-family: 'Lobster', cursive;
+    margin-bottom: 1rem;
+}
+
+
+.card:hover{
+    opacity: 55%;
+}
+
+#titles{
+    text-align:center;
+    margin-bottom: 1rem;
+}
+
+#ingredient{
+   width: 100%;
+}
+#selectContainer{
+    margin: auto;
+    width: 30%;
+}
+#meals{
+    margin: 3rem;
+    display:flex;
+    flex-wrap: wrap;
+}
