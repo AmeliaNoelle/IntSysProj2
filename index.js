@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use(process.env.BASE_URL+'/', express.static('public'))
+app.use(express.static('public'))
 
 app.get(process.env.BASE_URL+'/api/meals/:ingredient', (req, res) => {
    
